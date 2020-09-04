@@ -45,16 +45,27 @@
         - document.getElementsByClassName()
         - document.getElementsByTagName()
  
- Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
- Crie uma função que mude a cor do quadrado vermelho para branco.
+ 
+ 
  Crie uma função que corrija o texto da tag <h1>.
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-        //Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+    // 1) Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
         document.getElementsByTagName("P")[1].innerHTML = "Em 2022 estarei desenvolvendo aplicativos e portais";
-   
-
+     //2) Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+     let r = 76;
+     let g = 164;
+     let b = 109;        
+    let x = document.getElementsByClassName("main-content");
+    for (i = 0; i < x.length; i++) {    
+     x[i].style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+    // 3 Crie uma função que mude a cor do quadrado vermelho para branco.
+    let y = document.getElementsByClassName("center-content");
+    for (i = 0; i < x.length; i++) {    
+     y[i].style.backgroundColor = 'white';
+    }
     </script>
   </body>
 </html>
