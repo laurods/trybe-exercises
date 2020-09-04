@@ -48,8 +48,8 @@
  
  
  
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
- Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+
+
         */
     // 1) Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
         document.getElementsByTagName("P")[1].innerHTML = "Em 2022 estarei desenvolvendo aplicativos e portais";
@@ -68,6 +68,18 @@
     }
     // 4)Crie uma função que corrija o texto da tag <h1>.
       document.getElementsByTagName("H1")[0].innerHTML = "Exercício 5.1 - JavaScript";
+    // 5)  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      let p = document.getElementsByTagName("P");
+     
+      for (i = 0; i < p.length; i++) {    
+         p[i].style.textTransform = "uppercase";          
+      }
+      // 6) Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+      
+        for (i = 0; i < p.length; i++) {    
+        console.log(p[i].innerText);          
+        }
+      
 
     </script>
   </body>
