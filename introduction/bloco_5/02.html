@@ -67,7 +67,18 @@
       let div = document.createElement('div');
       div.className='main-content';
       corpo.appendChild(div);
-
+      //Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+      let div2 = document.createElement('div');
+      div2.className='center-content';
+      div.appendChild(div2);
+      //Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+      let p = document.createElement('p');
+      p.innerText='Estou dentro da div class-> center-content';
+      div2.appendChild(p);
+      //Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+      let div3 = document.createElement('div');
+      div3.className='left-content';
+      div.appendChild(div3);
     </script>
   </body>
 </html>
