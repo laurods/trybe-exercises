@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Lorem ipsum</h1>
+    </header>
+    <aside>
+        <h2>Suas Preferências:</h2>
+        <br>
+        <input id="corfundo" placeholder="cor de fundo"/>
+        <input id="cortexto" placeholder="cor do texto"/>
+        <input id="tamanhofonte" placeholder="tamanho da fonte"/>
+        <input id="espacamentolinha" placeholder="Espaçamento entre linhas"/>
+        <input id="tipodafonte" placeholder="tipo da fonte"/>
+        <button id="salvar">Salvar</button>
+
+
+
+    </aside>
+    <article>
+        <section>
+            <h2>Artigo 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+        </section>
+        <section>
+            <h2>Artigo 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+        </section>
+        <section>
+            <h2>Artigo 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, inventore? Repudiandae officiis praesentium optio ut excepturi, maxime nisi nulla, earum ab sequi molestiae voluptatem quasi rerum rem a ad incidunt.</p>
+        </section>
+    </article>
+
+
+
+    
+</body>
+<script>
+    window.onload = function() {
+        myStyle();
+    }
+    salvar = document.getElementById("salvar");
+    salvar.addEventListener("click", function(){
+       // pega as informações dos inputs
+        let background = document.querySelector("#corfundo").value;
+        let color = document.querySelector("#cortexto").value;
+        let size = document.querySelector("#tamanhofonte").value;
+        let line_height = document.querySelector("#espacamentolinha").value;
+        let font_family = document.querySelector("#tipodafonte").value;
+        // armazena no localStorage
+        localStorage.setItem("key_background", background);
+        localStorage.setItem("key_color", color);
+        localStorage.setItem("key_size", size);
+        localStorage.setItem("key_line_heigth", line_height);
+        localStorage.setItem("key_font_family", font_family);
+        myStyle();
+        /*
+        // pega do local stage
+        let mybackground = localStorage.getItem('key_background');
+        let mycolor = localStorage.getItem('key_color');
+        let mysize = localStorage.getItem('key_size');
+        let myline_height = localStorage.getItem('key_line_height');
+        let myfont_family = localStorage.getItem('key_font_family');
+        // pega a tag body
+        let body = document.querySelector('body');
+        body.style.backgroundColor=mybackground;
+        body.style.color=mycolor;
+        body.style.fontSize=mysize;
+        body.style.lineHeight=myline_height;
+        body.style.fontFamily=myfont_family;
+        */
+    });
+    function myStyle (){
+        // pega do local stage
+        let mybackground = localStorage.getItem('key_background');
+        let mycolor = localStorage.getItem('key_color');
+        let mysize = localStorage.getItem('key_size');
+        let myline_height = localStorage.getItem('key_line_height');
+        let myfont_family = localStorage.getItem('key_font_family');
+        // pega a tag body
+        let body = document.querySelector('body');
+        // muda o estilo
+        body.style.backgroundColor=mybackground;
+        body.style.color=mycolor;
+        body.style.fontSize=mysize;
+        body.style.lineHeight=myline_height;
+        body.style.fontFamily=myfont_family;
+    }
+    /*
+    input id="corfundo" />
+        
+       
+        <input id="espacamentofonte" />
+        <input id="tipodafonte" />
+    localStorage.removeItem("Nome");
+    localStorage.clear();
+    //localStorage.setItem("Nome", "Lauro");
+    let name = localStorage.getItem("Nome");
+   // alert(name);
+        // session nao mantem, se fechar o navegador apaga os dados.
+    */
+    </script>
+</html>
