@@ -4,50 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+   
 </head>
 <body>
-    <form action="" method="POST" enctype="multipart/form-data">
-        <fieldset>
-          <legend>Dados Pessoais</legend>
-          <label for="nome">Nome:</label>
-          <input id="nome" type="text" maxlength="40" autocomplete="off" name="nome" placeholder="Digite o nome" required="required"><br><br>
-          <label for="email">Email:</label>
-          <input id="email" type="email" maxlength="50" autocomplete="off" name="email" placeholder="Digite o e-mail" required="required"><br><br>
-          <label for="cpf">Cpf:</label>
-          <input id="cpf" type="number" maxlength="11" autocomplete="off" name="cpf" placeholder="Digite o CPF" required="required"><br><br>
-          <label for="endereco">Endereço:</label>          
-          <input id="endereco" type="text" maxlength="200" autocomplete="off" name="endereco" placeholder="Digite o Endereço" required="required"><br><br>
-          <input id="complemento" type="radio" id="casa" name="complemento" value="casa">
-          <label for="casa">Casa</label>
-          <input id="complemento" type="radio" id="apto" name="complemento" value="apto">
-          <label for="apto">Apto</label><br>
-          <label for="cidade">Cidade:</label>
-          <input id="cidade" type="text" maxlength="28" autocomplete="off" name="cidade" placeholder="Digite a cidade" required="required"><br><br>
-          <label for="estados">Estado</label>
-          <select id="estados" name="estados" id="estados" required="required"></select>
-        </fieldset>
-        <fieldset>
-          <legend>Ultimo Emprego</legend>
-          <label for="nome">Atividades desenvolvidas. *<em>Maximo 500 caracteres</em></label>
-          <br>         
-          <textarea id="atividades" name="atividades" id="atividades" maxlength="500" required="required" ></textarea>
-          <br>
-          <label for="cargo">Cargo:</label>
-          <input id="cargo" type="text" maxlength="40" autocomplete="off" name="cargo" placeholder="Digite o cargo" required="required"><br>
-          <label for="descCargo">Descrição do cargo . *<em>Maximo 500 caracteres</em></label>
-          <br>        
-          <textarea id="descCargo" name="descCargo" id="descCargo" maxlength="500" required="required" ></textarea>
-          <br>
-          <label for="dtInicio">Data de Inicio</label>
-          <input id="dtInicio" type="text" maxlength="40" autocomplete="off" name="dtInicio" placeholder="Digite a data de inicio" required="required"><br>
-        </fieldset>
-        <button id="confirmar">Confirmar</button>
-        <button id="limpar">Limpar</button>
-    </form>
+  <div class="row">
+    <div class="col s12">
+      <div class="card white-grey darken-1">
+        <div class="card-content white-text">
+              <form action="" method="POST" enctype="multipart/form-data">
+                <div class="input-field"></div>
+                  <label for="nome">Nome:</label><br>                    
+                    <input id="nome" type="text" maxlength="40" autocomplete="off" name="nome" placeholder="Digite o nome" required="required"/>
+                    <label for="email">Email:</label><br>
+                    <input id="email" type="email" maxlength="50" autocomplete="off" name="email" placeholder="Digite o e-mail" required="required">                    
+                    <label for="cpf">Cpf:</label>
+                    <input id="cpf" type="number" maxlength="11" autocomplete="off" name="cpf" placeholder="Digite o CPF" required="required"><br><br>
+                    <label for="endereco">Endereço:</label>          
+                    <input id="endereco" type="text" maxlength="200" autocomplete="off" name="endereco" placeholder="Digite o Endereço" required="required"><br>
+                    <p>
+                      <label for="casa">
+                      <input id="casa" type="radio"  name="complemento" value="casa">                 
+                    <span>Casa</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label for="apto">
+                      <input type="radio" id="apto" name="complemento" value="apto">                 
+                  <span>Apto</span>
+                  </label>
+                </p>
+                    <label for="cidade">Cidade:</label>
+                    <input id="cidade" type="text" maxlength="28" autocomplete="off" name="cidade" placeholder="Digite a cidade" required="required"><br><br>
+                    <label for="estados">Estado</label>
+                
+              
+                    <select id="estados" class="browser-default" name="estados" id="estados" required="required">
+                    
+                    </select>
+
+                
+                
+                    <legend>Ultimo Emprego</legend>
+                    <label for="nome">Atividades desenvolvidas. *<em>Maximo 500 caracteres</em></label>
+                    <br>         
+                    <textarea id="atividades" name="atividades"  maxlength="500" required="required" ></textarea>
+                    <br>
+                    <label for="cargo">Cargo:</label>
+                    <input id="cargo" type="text" maxlength="40" autocomplete="off" name="cargo" placeholder="Digite o cargo" required="required"><br>
+                    <label for="descCargo">Descrição do cargo . *<em>Maximo 500 caracteres</em></label>
+                    <br>        
+                    <textarea id="descCargo" name="descCargo" maxlength="500" required="required" ></textarea>
+                    <br>
+                    <label for="dtInicio">Data de Inicio</label>
+                    <input id="dtInicio" type="text" maxlength="40" autocomplete="off" name="dtInicio" placeholder="Digite a data de inicio" required="required"><br>
+                    <button class="btn waves-effect waves-light" id="confirmar">Confirmar</button>
+                    <button class="btn waves-effect waves-light" id="limpar">Limpar</button>
+                  </div>
+                  
+                  
+              
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+            <div class="row">
+              <div class="col s12">
+                <div class="card blue-grey darken-1">
+                  <div class="card-content white-text">
     <h1>Curriculo</h1>
     <div id="curriculo"></div>
-    
+  </div>
+</div>
+</div>
+</div>
+   
 </body>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </html>
